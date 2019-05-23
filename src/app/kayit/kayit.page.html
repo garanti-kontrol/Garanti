@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Garanti Takip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h2>Garanti Takip Kayıt Olmak için</h2>
+    <p>Kayıt olmak için mail adresiniz ile gereken işlemi gerçekleştirebilirsiniz.</p>
+    <p></p>
+    <br><br>
+        <ion-list>
+          
+      <ion-item>
+        <ion-label position="floating">Mail adresiniz</ion-label>
+        <ion-input type="text" [(ngModel)]="kullanici"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label position="floating">Şifreniz</ion-label>
+          <ion-input type="password" [(ngModel)]="sifre"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Şifre Tekrarı</ion-label>
+            <ion-input type="password" [(ngModel)]="tsifre"></ion-input>
+          </ion-item>
+      
+      </ion-list>
+
+      <ion-button expand="full" (click)="singup()">Kayıt Ol</ion-button>
+      </ion-content>

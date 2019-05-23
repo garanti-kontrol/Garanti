@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>urunler</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<div class="images">
+  <div class="image" *ngFor="let post of ((userposts | async)?.posts)">
+    <ion-card>
+      <ion-item> <ion-img src="https://ucarecdn.com/{{post.resim}}/"></ion-img>
+      </ion-item> 
+<ion-card-content>
+    <p><ion-label>Urun İsmi :</ion-label>{{post.urunismi}}</p>
+    <p><ion-label>Seri No   :</ion-label>{{post.serino}}</p>
+    <p><ion-label>Marka İsmi   :</ion-label>{{post.marka}}</p>
+    <p><ion-label>Model İsmi   :</ion-label>{{post.model}}</p>
+    <p><ion-label>Satın Alındam Tarihi  :</ion-label>{{post.stntr}}</p>
+    <p><ion-label>Garanti Bitiş Tarihi  :</ion-label>{{post.grntr}}</p>
+</ion-card-content>
+<ion-button  color="dark" (click)="del()">Sil</ion-button>
+<ion-button color="secondary" (click)="update()">Güncelle</ion-button>
+</ion-card>
+  </div>
+</div> 
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Garanti Takip </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+<h2>Garanti Takip Hoş geldiniz</h2>
+<p>Garanti Takip ile elinizde bulunan ürünleri ekleyebilir. Garanti ve servis sürelerini takip edebilirsiniz.</p>
+<p>Kullanım için üye olunması gerekmektedir.Eğer Üye değil iseniz Kayıt ol diyerek üye olabilirsiniz.</p>
+<br><br>
+<ion-list>
+<ion-item>
+  <ion-label position="floating" >Kullanıcı Adınız</ion-label>
+  <ion-input type="text" [(ngModel)]="kullanici"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label position="floating">Şifreniz</ion-label>
+  <ion-input [(ngModel)]="sifre" type="password"></ion-input>
+</ion-item>
+</ion-list>
+<ion-button expand="full" (click)="login()">Giriş</ion-button>
+<ion-button expand="full" (click)="kayit()">Kayıt Ol</ion-button>
+
+</ion-content>
