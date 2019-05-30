@@ -5,7 +5,23 @@
 </ion-header>
 
 <ion-content padding>
-<div class="images">
+<div id="profile-info"> 
+
+       <ion-row>
+        <ion-img src="https://ucarecdn.com/{{profilfoto}}/-/scale_crop/50x50/center"></ion-img>
+         <p>{{kullanici}}</p><br>
+         
+                <ion-button shape="round" color="primary" (click)="edit()">Profili Düzenle
+                </ion-button>
+                <ion-button shape="round" color="primary" (click)="cks()">Çıkış Yap
+                </ion-button>
+              
+    
+       
+      </ion-row>
+  </div>
+  <ion-item><ion-searchbar></ion-searchbar></ion-item>
+<div class="images" *ngIf="posts">
   <div class="image" *ngFor="let post of ((userposts | async)?.posts)">
     <ion-card>
       <ion-item> <ion-img src="https://ucarecdn.com/{{post.resim}}/"></ion-img>
@@ -17,8 +33,9 @@
     <p><ion-label>Model İsmi   :</ion-label>{{post.model}}</p>
     <p><ion-label>Satın Alındam Tarihi  :</ion-label>{{post.stntr}}</p>
     <p><ion-label>Garanti Bitiş Tarihi  :</ion-label>{{post.grntr}}</p>
+    <p><ion-label>Kullanıcı   :</ion-label>{{kullanici}}</p>
 </ion-card-content>
-<ion-button  color="dark" (click)="del()">Sil</ion-button>
+<ion-button  color="dark" (click)="del(kullanici)">Sil</ion-button>
 <ion-button color="secondary" (click)="update()">Güncelle</ion-button>
 </ion-card>
   </div>

@@ -24,7 +24,9 @@ const routes: Routes = [
   { path: 'uploader', loadChildren: './uploader/uploader.module#UploaderPageModule' },
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'kayit', loadChildren: './kayit/kayit.module#KayitPageModule' },
-  { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule' }
+  { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule' },
+  { path: 'edit-page', loadChildren: './edit-page/edit-page.module#EditPagePageModule' }
+  //{ path: 'edit-page', loadChildren: '../edit-page/edit-page.module#EditPagePageModule' }
 
 ];
 
